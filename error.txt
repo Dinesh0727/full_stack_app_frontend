@@ -1,0 +1,19 @@
+If you need to install node in all the sessions of powershell you have to have any of the package managers in the root or else there should be a script which runs on the intiation of the new powershell session.
+
+The package manager that I have access on present computer is fnm.
+
+It was throwinng an error like this
+
+npm : The term 'npm' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the 
+spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ npm start
++ ~~~
+    + CategoryInfo          : ObjectNotFound: (npm:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+https://github.com/Schniz/fnm#powershell - This is the github issue link I found a solution for it.
+
+Then you will have the following error which says you to go to microsoft as not all the scripts can be run with the signed script execution policy and visit the site for more information - https:/go.microsoft.com/fwlink/?LinkID=135170
+
+So I tried multiple execution policies but when I run the execution policy command which sets it to "bypass", the profile was being run fine on every intiation of powershell.
