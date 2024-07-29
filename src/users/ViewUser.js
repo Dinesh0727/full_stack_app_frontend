@@ -14,7 +14,7 @@ export default function ViewUser() {
   const { firstName, lastName, email } = user;
 
   const loadUser = async (id) => {
-    const fetchedUser = await axios.get(`http://localhost:8080/user/${id}`);
+    const fetchedUser = await axios.get(`https://fullstackspringbootreact-production.up.railway.app/user/${id}`);
     setUser(fetchedUser.data);
     console.log(
       "The user fetched through the request from the viewUser page" +

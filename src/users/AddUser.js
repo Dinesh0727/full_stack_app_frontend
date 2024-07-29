@@ -20,7 +20,7 @@ export default function AddUser() {
   const onSubmit =  async (e) => {
     e.preventDefault();
     console.log(user);
-    await axios.post("http://localhost:8080/addUser", user);
+    await axios.post("https://fullstackspringbootreact-production.up.railway.app/addUser", user);
     navigate("/");
   };
 

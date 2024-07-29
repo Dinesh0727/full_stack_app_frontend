@@ -10,14 +10,14 @@ export default function Home() {
   }, []);
 
   const loadUsers = async () => {
-    const result = await axios.get("http://localhost:8080/allUsers");
+    const result = await axios.get("https://fullstackspringbootreact-production.up.railway.app/allUsers");
     setUsers(result.data);
     // console.log(result.data);
   };
 
   const onDelete = async (e) => {
     // console.log(e);
-    await axios.delete(`http://localhost:8080/deleteUser/${e}`);
+    await axios.delete(`https://fullstackspringbootreact-production.up.railway.app/deleteUser/${e}`);
     await loadUsers();
   };
 

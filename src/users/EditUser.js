@@ -16,7 +16,7 @@ export default function EditUser() {
   const {firstName, lastName, email} = user;
 
   const loadUser = async (id) => {
-    const fetchedUser = await axios.get(`http://localhost:8080/user/${id}`);
+    const fetchedUser = await axios.get(`https://fullstackspringbootreact-production.up.railway.app/user/${id}`);
     setUser(fetchedUser.data);
     console.log(
       "The user fetched through the request from the editUser page" + fetchedUser
@@ -34,7 +34,7 @@ export default function EditUser() {
   const onSubmit = async (e) => {
     e.preventDefault();
     console.log(user);
-    await axios.put(`http://localhost:8080/updateUser/${id}`, user);
+    await axios.put(`https://fullstackspringbootreact-production.up.railway.app/updateUser/${id}`, user);
     navigate("/");
   };
 
